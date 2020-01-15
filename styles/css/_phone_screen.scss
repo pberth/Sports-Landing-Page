@@ -1,0 +1,14 @@
+.screen {
+  height: 583px;
+  width: 100%;
+  background-image: url(../../img/PhoneMobile.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: cover;
+}
+
+@media (min-width: $mobile_landscape) {
+  .screen {
+    background-image: url(../../img/PhoneLaptop.svg);
+  }
+}

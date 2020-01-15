@@ -1,0 +1,115 @@
+.main {
+  @include flexCenter(start);
+  flex-direction: column;
+  width: 100%;
+  background-color: $main_color;
+  .logo_wrapper {
+    @include flexCenter(center);
+    margin-top: 15%;
+    width: 100%;
+    .logo {
+      display: block;
+      width: 100px;
+      height: 32px;
+    }
+  }
+  .main_header_wrapper {
+    @include flexCenter(center);
+    margin-top: 16%;
+    .main_header {
+      @include font(bold, 30px, 40px, $main_header_color);
+      letter-spacing: 0.03em;
+    }
+  }
+  .main_description_wrapper {
+    @include flexCenter(center);
+    margin-top: 10%;
+    .main_description {
+      @include font(normal, 16px, 23px, $main_description_color);
+      margin: 0px 5%;
+    }
+  }
+  .stores_wrapper {
+    height: 44px;
+    width: 100%;
+    margin: 12% 0 15% 0;
+    .apple_link {
+      @include link(left, "../../img/AppleStore.png");
+      margin-left: 5%;
+    }
+
+    .android_link {
+      @include link(right, "../../img/GooglePlay.png");
+      margin-right: 5%;
+    }
+  }
+}
+
+@media (min-width: $mobile_landscape) {
+  .main {
+    .main_header_wrapper {
+      margin: 10% 5% 5% 5%;
+    }
+    .main_description_wrapper {
+      margin: 5% 5%;
+    }
+    .stores_wrapper {
+      margin: 5% 5%;
+      .apple_link {
+        margin-left: 10%;
+      }
+      .android_link {
+        margin-right: 10%;
+      }
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .main {
+    background-color: $main_color;
+    background-image: url(../../img/First_section_background.png);
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    object-fit: cover;
+    .logo_wrapper {
+      @include flexCenter(start);
+      margin-top: 5%;
+      .logo {
+        margin-left: 10%;
+      }
+    }
+    .main_header_wrapper {
+      @include flexCenter(start);
+      width: 100%;
+      .main_header {
+        @include font(bold, 36px, 48px, $main_header_color);
+        margin-left: 10%;
+        width: 45%;
+        text-align: start;
+      }
+    }
+    .main_description_wrapper {
+      @include flexCenter(start);
+      width: 100%;
+      .main_description {
+        @include font(normal, 18px, 26px, $main_description_color);
+        margin-left: 10%;
+        width: 35%;
+        text-align: start;
+      }
+    }
+    .stores_wrapper {
+      margin: 5% 5%;
+      .apple_link {
+        margin-left: 10%;
+      }
+      .android_link {
+        @include link(left, "../../img/GooglePlay.png");
+        margin-left: 10%;
+        margin-right: 0;
+      }
+    }
+  }
+}

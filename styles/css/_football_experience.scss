@@ -1,0 +1,49 @@
+.football_experience {
+  @include flexCenter(start);
+  flex-direction: column;
+  width: 100%;
+  .text_wrapper {
+    @include flexCenter(center);
+    margin-top: 15%;
+    width: 100%;
+    .text {
+      @include font(bold, 16px, 21px, $text_color);
+    }
+  }
+  .main_text_wrapper {
+    @include flexCenter(center);
+    margin-top: 5%;
+    .main_text {
+      @include font(bold, 28px, 37px, $football_experience_color);
+    }
+  }
+  .paragraph_wrapper {
+    @include flexCenter(center);
+    flex-direction: column;
+    margin: 5%;
+    .first_paragraph_wrapper {
+      margin: 0 0 10% 0;
+    }
+    .paragraph {
+      @include font(normal, 16px, 23px, $paragraph_color);
+    }
+  }
+  .learn_more_wrapper {
+    .learn_more {
+      @include font(bold, 16px, 21px, $text_color);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: $mobile_landscape) {
+  .football_experience {
+    .main_text_wrapper {
+      margin: 5% 10% 0 10%;
+    }
+    .paragraph_wrapper {
+      margin: 5% 10%;
+    }
+  }
+}

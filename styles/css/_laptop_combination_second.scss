@@ -1,0 +1,52 @@
+@media (min-width: $laptop) {
+  .laptop_combination_second {
+    @include flexCenter(start);
+    flex-direction: row;
+    .football_experience {
+      @include flexCenter(start);
+      width: 50%;
+      .text_wrapper {
+        @include flexCenter(start);
+        margin-top: 15%;
+        width: 100%;
+        .text {
+          margin-left: 10%;
+          text-align: start;
+        }
+      }
+      .main_text_wrapper {
+        @include flexCenter(start);
+        margin-top: 5%;
+        width: 100%;
+        .main_text {
+          margin-left: 10%;
+        }
+      }
+      .paragraph_wrapper {
+        @include flexCenter(start);
+        flex-direction: column;
+        .paragraph {
+          text-align: start;
+          margin-right: 20%;
+        }
+      }
+      .learn_more_wrapper {
+        @include flexCenter(start);
+        width: 100%;
+        .learn_more {
+          margin-left: 10%;
+        }
+      }
+    }
+    .phone_screen {
+      width: 50%;
+      .phone_screen_wrapper {
+        width: 100%;
+        .screen {
+          width: 100%;
+          background-image: url(../../img/PhoneLaptop.svg);
+        }
+      }
+    }
+  }
+}

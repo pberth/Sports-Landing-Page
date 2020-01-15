@@ -1,0 +1,45 @@
+@media (min-width: $laptop) {
+  .laptop_combination_third {
+    margin-top: 5%;
+    height: 100%;
+    @include flexCenter(start);
+    flex-direction: row-reverse;
+    .your_team {
+      @include flexCenter(start);
+      width: 50%;
+      .main_header_wrapper {
+        @include flexCenter(start);
+        margin-top: 15%;
+        width: 100%;
+        .main_header {
+          margin-left: 5%;
+          margin-right: 0;
+        }
+      }
+      .main_description_wrapper {
+        @include flexCenter(start);
+        margin-top: 5%;
+        width: 100%;
+        .main_description {
+          text-align: start;
+        }
+      }
+
+      .stores_wrapper {
+        margin-bottom: 5%;
+        .apple_link {
+          margin-left: 5%;
+        }
+        .android_link {
+          @include link(left, "../../img/GooglePlay.png");
+          margin-left: 10%;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .hero_image_wrapper {
+    width: 50%;
+    height: 600px;
+  }
+}

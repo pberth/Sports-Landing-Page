@@ -1,0 +1,28 @@
+@import "../glide/sass/glide.core.scss";
+@import "../glide/sass/glide.theme.scss";
+@import "./variables";
+@import "./mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "./header";
+@import "./football_experience";
+@import "./hero_image";
+@import "./phone_screen";
+@import "./grid";
+@import "./comment";
+@import "./logos";
+@import "./your_team";
+@import "./second_hero_image";
+@import "./footer";
+
+// Combinations
+@import "./laptop_combination_first";
+@import "./laptop_combination_second";
+@import "./laptop_combination_third";
+
+// Screens
+@import "./screen";

@@ -1,0 +1,57 @@
+.your_team {
+  @include flexCenter(start);
+  flex-direction: column;
+  width: 100%;
+  .main_header_wrapper {
+    @include flexCenter(center);
+    margin-top: 5%;
+    .main_header {
+      @include font(bold, 30px, 40px, $main_header_color);
+      letter-spacing: 0.03em;
+    }
+  }
+  .main_description_wrapper {
+    @include flexCenter(center);
+    margin-top: 5%;
+    .main_description {
+      @include font(normal, 16px, 23px, $main_description_color);
+      margin: 0px 5%;
+    }
+  }
+  .stores_wrapper {
+    height: 44px;
+    width: 100%;
+    margin: 12% 0 15% 0;
+    .apple_link {
+      @include link(left, "../../img/AppleStore.png");
+      margin-left: 5%;
+    }
+
+    .android_link {
+      @include link(right, "../../img/GooglePlay.png");
+      margin-right: 5%;
+    }
+  }
+}
+
+@media (min-width: $mobile_landscape) {
+  .your_team {
+    .main_header_wrapper {
+      .main_header {
+        margin: 0 10%;
+      }
+    }
+    .main_description_wrapper {
+      margin: 5% 5%;
+    }
+    .stores_wrapper {
+      margin: 5% 5%;
+      .apple_link {
+        margin-left: 10%;
+      }
+      .android_link {
+        margin-right: 10%;
+      }
+    }
+  }
+}

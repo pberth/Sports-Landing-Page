@@ -1,0 +1,23 @@
+@mixin flexCenter($content) {
+  display: flex;
+  justify-content: $content;
+  align-items: center;
+}
+@mixin font($weight, $size, $height, $color) {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  text-align: center;
+  color: $color;
+}
+@mixin link($float, $url) {
+  display: inline-block;
+  float: $float;
+  width: 146px;
+  height: 44px;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

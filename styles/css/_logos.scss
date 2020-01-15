@@ -1,0 +1,74 @@
+.cooperation {
+  @include flexCenter(start);
+  flex-direction: column;
+  width: 100%;
+  .main_text_wrapper {
+    @include flexCenter(center);
+    margin-top: 5%;
+    .main_text {
+      @include font(bold, 28px, 37px, $football_experience_color);
+    }
+  }
+  .logos_wrapper {
+    @include flexCenter(center);
+    flex-direction: column;
+    width: 100%;
+    .logos {
+      height: 80px;
+      width: 100%;
+      @include flexCenter(space-around);
+      img.logo {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $mobile_landscape) {
+  .cooperation {
+    .main_text_wrapper {
+      .main_text {
+        margin: 0 10%;
+      }
+    }
+    .logos_wrapper {
+      .logos {
+        margin: 0 10%;
+      }
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .cooperation {
+    @include flexCenter(center);
+    flex-direction: column;
+    align-items: start;
+
+    width: 100%;
+    .main_text_wrapper {
+      @include flexCenter(center);
+      text-align: center;
+      width: 100%;
+      margin-top: 5%;
+      .main_text {
+        @include font(bold, 28px, 37px, $football_experience_color);
+      }
+    }
+    .logos_wrapper {
+      @include flexCenter(center);
+      flex-direction: row;
+      width: 100%;
+      .logos {
+        margin: 0;
+        height: 80px;
+        width: auto;
+        @include flexCenter(center);
+        img.logo {
+          display: block;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}

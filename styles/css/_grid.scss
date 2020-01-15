@@ -1,0 +1,167 @@
+.your_experience {
+  @include flexCenter(center);
+  flex-direction: column;
+  width: 100%;
+  .main_text_wrapper {
+    @include flexCenter(center);
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    .main_text {
+      @include font(bold, 28px, 37px, $football_experience_color);
+    }
+  }
+  .grid {
+    @include flexCenter(center);
+    flex-direction: column;
+    .description_wrapper {
+      @include flexCenter(center);
+      flex-direction: column;
+      margin-bottom: 5%;
+      .icon {
+        margin-bottom: 10px;
+        width: 40px;
+        height: 40px;
+      }
+      #icon1 {
+        background-image: url(../../img/icons/blue/icon1.png);
+      }
+      #icon2 {
+        background-image: url(../../img/icons/blue/icon2.png);
+      }
+      #icon3 {
+        background-image: url(../../img/icons/blue/icon3.png);
+      }
+      #icon4 {
+        background-image: url(../../img/icons/blue/icon4.png);
+      }
+      #icon5 {
+        background-image: url(../../img/icons/blue/icon5.png);
+      }
+      #icon6 {
+        background-image: url(../../img/icons/blue/icon6.png);
+      }
+      #icon7 {
+        background-image: url(../../img/icons/blue/icon7.png);
+      }
+      #icon8 {
+        background-image: url(../../img/icons/blue/icon8.png);
+      }
+      #icon9 {
+        background-image: url(../../img/icons/blue/icon9.png);
+      }
+      .paragraph {
+        @include font(normal, 16px, 23px, $paragraph_color);
+      }
+    }
+  }
+}
+
+@media (min-width: $mobile_landscape) {
+  .your_experience {
+    .main_text_wrapper {
+      .main_text {
+        margin: 0 10%;
+      }
+    }
+    .grid {
+      .description_wrapper {
+        @include flexCenter(flex-start);
+        .paragraph {
+          margin: 0% 10%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .your_experience {
+    background-image: url(../../img/GridBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .main_text_wrapper {
+      .main_text {
+        @include font(bold, 28px, 37px, white);
+      }
+    }
+    .grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      .description_wrapper {
+        align-items: flex-start;
+        width: 50%;
+        .icon {
+          margin-left: 10%;
+        }
+        #icon1 {
+          background-image: url(../../img/icons/white/icon1.png);
+        }
+        #icon2 {
+          background-image: url(../../img/icons/white/icon2.png);
+        }
+        #icon3 {
+          background-image: url(../../img/icons/white/icon3.png);
+        }
+        #icon4 {
+          background-image: url(../../img/icons/white/icon4.png);
+        }
+        #icon5 {
+          background-image: url(../../img/icons/white/icon5.png);
+        }
+        #icon6 {
+          background-image: url(../../img/icons/white/icon6.png);
+        }
+        #icon7 {
+          background-image: url(../../img/icons/white/icon7.png);
+        }
+        #icon8 {
+          background-image: url(../../img/icons/white/icon8.png);
+        }
+        #icon9 {
+          background-image: url(../../img/icons/white/icon9.png);
+        }
+        .paragraph {
+          @include font(normal, 16px, 23px, white);
+          display: list-item;
+          list-style-type: disc;
+          list-style-position: inside;
+          text-align: start;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .your_experience {
+    background-image: url(../../img/GridBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .main_text_wrapper {
+      .main_text {
+        @include font(bold, 28px, 37px, white);
+      }
+    }
+    .grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      .description_wrapper {
+        align-items: flex-start;
+        width: 33.33%;
+        .icon {
+          margin-left: 10%;
+        }
+        .paragraph {
+          @include font(normal, 16px, 23px, white);
+          display: list-item;
+          list-style-type: disc;
+          list-style-position: inside;
+          text-align: start;
+        }
+      }
+    }
+  }
+}

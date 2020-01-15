@@ -1,0 +1,121 @@
+.comments {
+  @include flexCenter(center);
+  flex-direction: column;
+  height: 230px;
+  overflow: hidden;
+  .main_text_wrapper {
+    @include flexCenter(center);
+    margin-top: 5%;
+    .main_text {
+      @include font(bold, 28px, 37px, $football_experience_color);
+    }
+  }
+  .glide {
+    .glide__track {
+      .glide__slides {
+        .glide__slide {
+          width: 100%;
+          @include flexCenter(center);
+          .comment {
+            width: 80%;
+            margin: 5% 0;
+            border: 1px solid $border_color;
+            .social {
+              @include flexCenter(flex-start);
+              margin-top: 3%;
+              .face {
+                position: relative;
+                top: 10%;
+                left: 10%;
+              }
+              .name {
+                position: relative;
+                top: 10%;
+                left: 20%;
+              }
+              .twitter {
+                position: relative;
+                top: 10%;
+                left: 30%;
+                cursor: pointer;
+              }
+            }
+            .paragraph_wrapper {
+              @include flexCenter(center);
+              flex-direction: column;
+              margin: 5%;
+              .paragraph {
+                @include font(normal, 16px, 23px, $paragraph_color);
+                max-height: 50px;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .previous {
+    background-image: url(../../img/arrow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 10%;
+    transform: rotateY(180deg) translate(30px, -40%);
+  }
+  .next {
+    background-image: url(../../img/arrow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 10%;
+    transform: translate(30px, -40%);
+  }
+  .points {
+    transform: translateY(50%);
+  }
+}
+
+@media (min-width: $mobile_landscape) {
+  .comments {
+    height: 300px;
+    .comment {
+      .social {
+        .face {
+          left: 25%;
+        }
+        .name {
+          left: 30%;
+        }
+        .twitter {
+          left: 35%;
+        }
+      }
+      .paragraph_wrapper {
+        margin: 2%;
+        .paragraph {
+          margin: 0 5%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .comments {
+    .previous {
+      left: 5%;
+    }
+    .next {
+      right: 5%;
+    }
+  }
+}
+@media (min-width: $laptop) {
+  .comments {
+    .previous {
+      left: 3.33%;
+    }
+    .next {
+      right: 3.33%;
+    }
+  }
+}
